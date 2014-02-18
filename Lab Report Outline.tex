@@ -1,0 +1,102 @@
+
+\documentclass[paper=letter, fontsize=12pt]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+
+\usepackage[english]{babel}															% English language/hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx}	
+\usepackage{url}
+\usepackage{authblk}
+
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\raggedright \normalfont\scshape}
+
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}											% No page header
+\fancyfoot[L]{}											% Empty 
+\fancyfoot[C]{}											% Empty
+\fancyfoot[R]{\thepage}									% Pagenumbering
+\renewcommand{\headrulewidth}{0pt}			% Remove header underlines
+\renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
+\setlength{\headheight}{13.6pt}
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+
+\title{
+		%\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{Grand Valley State University} \\
+        \normalfont \normalsize \textsc{Deptartment of Electrical Engineering} \\[20pt]
+		\horrule{0.5pt} \\[0.4cm]
+		\huge Design Proposal for Low-Profile, Piezoelectric Cantilever based Harvester  \\
+		\horrule{1pt} \\[0.4cm]
+}
+\author[1]{Dr. Heidi Jiao}
+\author[2]{Kurt VonEhr}
+
+\renewcommand\Affilfont{\fontsize{12}{10.8}\itshape}
+\affil[1]{Professor of Electrical Engineering, Grand Valley State University} 
+\affil[2]{Undergraduate Research Assistant, Grand Valley State University}
+
+
+
+
+%%% Begin document
+\begin{document}
+\maketitle
+\section{Introduction}
+
+This harvester is intended to function as an aftermarket product, attached by non-invasive installation onto an office chair. The desired location of attachment is the underside of any chair seat with sufficient surface area to mount. This location has several implications. First, the forces available to this device are limited to the tangential acceleration generated from the axial rotation of the chair seat. Because the forces are generated in the plane on the seat, gravity cannot be taken advantage of. Using an enclosed cantilever design, a proof mass can be placed at the tip of the cantilever, where the cantilever is placed tangential to the radius of centripetal force 
+
+\section{Proposed Designs}
+
+The motivation of this design is to limit the volume required by the device and  maximize power output. This will be accomplished by matching the mechanical resonance of the piezoelectric cantilever beam to the device enclosure. Achieving this will maximize the power density of the device. Several ideas will be proposed with hopes of converging them into a single, optimized design. This design will then be built into a prototype and power output maximized via resonant tuning. Subsequent designs will expand upon this initial prototype by identifying design flaws and improving overall efficiency.
+
+\subsection{Enclosure Design}
+
+The inertia from the proof mass will be used to depress the driving cantilever, the force is developed from rotation in the chair. The chair will have the same angular acceleration all through the rotating radius, but will have a greater linear acceleration towards the outer edge of the chair, as shown in Eq(1).
+
+\begin{equation}
+a = r * \alpha
+\end{equation}
+
+\noindent
+Where $\alpha$ is the angular acceleration, 'r' is the radius and 'a' is the resulting linear acceleration. Realizing  this, the enclosure should be as long as possible in order to allow for a long driving cantilever along the radius on which to place the tip mass, with the base of the cantilever near the axis of rotation. A simple illustration of the enclosure (rectangular shape) on the underside of the chair (circle) is shown in Fig. 1 below.
+
+The harvest structure contained inside the enclosure will focus on two forms of frequency-up conversions. Magnetic-Coupled and Impact-Driven.
+
+
+\subsection{Impact-Driven Generation}
+
+
+\section{Plan of Action}
+
+TBD
+
+\begin{thebibliography}{1}
+
+\bibitem{notes} John W. Dower {\em Readings compiled for History
+  21.479.}  1991.
+
+\bibitem{impj}  The Japan Reader {\em Imperial Japan 1800-1945} 1973:
+  Random House, N.Y.
+
+\bibitem{norman} E. H. Norman {\em Japan's emergence as a modern
+  state} 1940: International Secretariat, Institute of Pacific
+  Relations.
+
+\bibitem{fo} Bob Tadashi Wakabayashi {\em Anti-Foreignism and Western
+  Learning in Early-Modern Japan} 1986: Harvard University Press.
+
+\end{thebibliography}
+  
+\end{document}
