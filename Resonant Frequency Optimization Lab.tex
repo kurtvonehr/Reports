@@ -17,10 +17,10 @@
 
 \begin{document}
 
-%TITLE OF REPORT
+
 \title{Determining maximum power output of cantilever based Piezoelectric Energy Harvester under various resonant conditions}
 
-% AUTHORS ... MAKE SURE YOUR NAME GOES FIRST, FOLLOWED BY LAB PARTNERS
+
 \author{Kurt VonEhr}
 \email[]{vonehrk@gvsu.edu}
 \affiliation{ Padnos College of Engineering and Computing, Grand Valley State University}
@@ -28,37 +28,29 @@
 \date{\today}
 
 \begin{abstract}
-% ABSTRACT GOES HERE
+
 Piezoelectric devices will produce varying outputs (voltage, current, etc) depending on the resonance of their structure. For this experiment, the structure under study will be a single bimorph piezocantilever containing a steel sheet metal substrate. Without performing a complex mathematical analysis of the systmem, a rough optimization of a piezoelectric cantilever harvesting system can be obtained through experimentation. In this experiment, the maximum power output of the energy harvesting device will be determined by measuring the charge accumlated on a storage capacitor of known capacitance, after a consistent number of plucks and pluck angle for each particular resonant configuration. The resonsance will be varied by moving a tip mass to different positions along the cantilever arm. The cantilever substrate will be assumed to be massless with respect to the tip mass. The results should illustrate which length will maximize the power output of the cantilever arm when plucked. This experimentation is necessary in order to prototype design a roughly optimized Harvesting Node Device (HND). This device will contain 12 cantilever harvesting arms and be used to transmit data. The HND is the driving motivation of this experiment. 
 \end{abstract}
-
-% THIS COMMAND WILL MAKE THE TITLE 
+ 
 \maketitle
 
-% THE FIRST SECTION IS THE INTRODUCTION
 \section{Procedure}
 
-Due to the unique structure of the desired HND (not in the scope of this report), a non-commercial piezo cantilever device must be constructed. A piezo sheet of size 2.85in x 2.85in was purchased and is the starting point for the piezo dimension choices. The design of the HDN will include 12 bimorph cantilevers. To optimize the available piezo material for 12 cantilevers,  the dimensions of each bimorph structure will be as shown in Fig. 1 below:
+Due to the unique structure of the desired HND (not in the scope of this report), a non commercially available piezo cantilever device must be constructed. A piezo sheet of size 2.85in x 2.85in was purchased and is the starting point for the piezo dimension choices. The design of the HDN will include 12 bimorph cantilevers. To optimize the available piezo material for 12 cantilevers,  the dimensions of each bimorph structure will be as shown in FIG. 1. The values of X1 and X2 shown in FIG. 1, will be varied individually, such that the particular lengths can be isolated and the associated generated charge measured. To ensure that the generated power is consistant, the angle of the pluck release will be held constant. The angle will be loosely based upon the commercial product manufactered by Volture, who lists a maximum tip to tip displacement of .12in for the V22BL model \footnotemark\footnotetext{\url{http://www.mide.com/pdfs/Volture_Datasheet_001.pdf}}. The distance from base to tip is 2.75in. The angle of displacement is therefore: 
 
-\begin{figure}[h]
-  \caption{}
+\begin{equation}
+ 2.49 ^\circ = \arctan (.12/2.75)
+\end{equation}
+
+\begin{figure}[ht!]
   \centering
-    \includegraphics[scale=0.6]{Bimorph Cantilever.jpg}
+  \includegraphics[scale=0.6]{Bimorph_Cantilever.jpg}
+  \caption{Laboratory Test Bimorph Piezoelectric Cantilever}
 \end{figure}
 
+Using this angle (1) as a reference and prior knowledge of the bimorph cantilever, an angle of $3^\circ$ will be used. In previous experiments, the cantilever was allowed to bend further than $2.5^\circ$ without damage. The sheet will be cut by razo blade etching and a controlled break as indicated on this webpage: \url{http://www.piezo.com/tech3faq.html}
 
-There are two different regimes of operation for a transistor when it is on.  In the linear regime, the current that flows into the collector is proportional to the current that flows into the base:
-% HERE WE INCLUDE AN EQUATION
-\begin{equation}
-	I_c = \beta \, I_b \, . 
-	% THIS EQUATION IS LABELED SO WE CAN REFER TO IT IN THE TEXT
-	\label{eq:transistorlinear1}
-\end{equation}
-The constant $\beta$ is large, typically  $100-200$, and effectively constant over the linear regime~\cite{EssickLecture}.  Because the current that flows into the collector is negligible when the transistor is operating in the linear regime, the current that flows out of the emitter is essentially equal to the current that flows into the collector
-\begin{equation}
-	I_e \approx I_b \, . 
-	\label{eq:transistorlinear2}
-\end{equation}
+
 Finally, the transistor maintains a fixed voltage between the base and the collector.  Referred to as $V_{be} \equiv V_b - V_e$, this value is approximately 
 \begin{equation}
 	V_{be} \approx 0.6 \, V \, .
